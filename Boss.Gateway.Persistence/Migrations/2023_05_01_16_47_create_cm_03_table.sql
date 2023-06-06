@@ -1,0 +1,20 @@
+CREATE TABLE cm_03(
+    id uuid PRIMARY KEY,
+    settlement_id VARCHAR(100) NOT NULL,
+    trade_date VARCHAR(50) NOT NULL,
+    settlement_date VARCHAR(50) NOT NULL,
+    script_number integer NOT NULL,
+    script_short_name VARCHAR(50) NOT NULL,
+    quantity integer NOT NULL,
+    client_code VARCHAR(100) NOT NULL,
+    rate decimal NOT NULL,
+    contract_number VARCHAR(100) NOT NULL,
+    contract_amount decimal NOT NULL,
+    nepse_commission decimal NOT NULL,
+    sebo_commission decimal NOT NULL,
+    tds decimal NOT NULL,
+    amount_payable_for_pay_in decimal NOT NULL,
+    trade_type VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP NOT NULL,
+    cm03_entry_id uuid NOT NULL REFERENCES cm_03_entries(id)
+);
