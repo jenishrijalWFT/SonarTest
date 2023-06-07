@@ -30,7 +30,7 @@ jobs:
         run: |
           # Configure SonarQube properties
           echo "sonar.projectKey=sonartest" >> sonar-project.properties
-          echo "sonar.projectName=SOnar Test" >> sonar-project.properties
+          echo "sonar.projectName=sonartest" >> sonar-project.properties
           echo "sonar.sources=." >> sonar-project.properties
           echo "sonar.host.url=${{secrets.SONAR_HOST_URL}}" >> sonar-project.properties  # Update with your SonarQube server URL
           echo "sonar.login=${{ secrets.SONAR_TOKEN }}" >> sonar-project.properties
