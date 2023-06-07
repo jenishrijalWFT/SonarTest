@@ -5,7 +5,6 @@ public class SellBilles
     public SellBilles()
     {
         this.Id = Guid.NewGuid();
-        this.CreatedAt = DateTime.Now;
     }
 
     public Guid Id { get; set; }
